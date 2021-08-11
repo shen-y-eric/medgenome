@@ -1,0 +1,45 @@
+<!-- Genome Browser page -->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Logo -->
+        <div class="title">
+            <a href='https://research.medgenome.com/' target='_blank'><img src="./Images/medgenome-large.jpg"
+                 style='height: 100px; width: 200px; object-fit: contain' alt='Logo'></a>
+            <div class="line"></div>
+            <div id="title-text">
+                SNAKE GENOME BROWSER
+            </div>
+        </div>
+        <!-- Navigation bar -->
+        <div class="nav">
+            <div class='nav-text'><a href='./home.html'>Home</a></div>
+            <div class='nav-text' id='dropdown'>
+                Genomes
+                <div class='dropdown-content'>
+                  <a href='../Documents/quast-5.0.2/quast_results/results_2021_08_03_12_14_21/report.html'>Indian cobra <i>(Naja naja)</i></a>
+                  <a href='../Documents/quast-5.0.2/quast_results/results_2021_08_03_15_49_51/report.html'>Common krait <i>(Bungarus caeruleus)</i></a>
+                  <a href='../Documents/quast-5.0.2/quast_results/results_2021_08_04_10_49_46/report.html'>Malayan pit viper <i>(Calloselasma rhodostoma)</i></a>
+                  <a href='../Documents/quast-5.0.2/quast_results/results_2021_08_04_12_02_12/report.html'>Black-necked spitting cobra <i>(Naja nigricollis)</i></a>
+                  <a href='../Documents/quast-5.0.2/quast_results/results_2021_08_04_12_53_47/report.html'>Russell's viper <i>(Daboia russelii)</i></a>
+                </div>
+            </div>
+            <div class ='nav-text'><a href='./index.html'>Genome Browser</a></div>
+            <div class = 'nav-text'><a href='https://research.medgenome.com/contact/'>Contact Us</a></div>
+        </div>
+    </div>
+    <!--- JBrowse web browser displayed through iFrame; src currently set to local server (npx serve) -->
+    <iframe src="http://localhost:5000" width='100%' height='100%'></iframe>
+  </body>
+</html>

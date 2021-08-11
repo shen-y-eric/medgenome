@@ -1,0 +1,222 @@
+/**
+* Header
+*
+* Header includes Medgenome logo, "SNAKE GENOME BROWSER" title,
+* and a gray line to separate them. Clicking on Medg
+*/
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title img {
+    padding-top: 7px;
+}
+.line {
+    border-left: 2px solid gray;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#title-text {
+    font-family: 'Lato', sans-serif;
+    font-weight: 550;
+    color: #045D75
+}
+
+/**
+* Navigation bar
+*
+* Navigation bar which has links to Home page, a dropdown menu for
+* snake genome information, genome browser, and external link to Medgenome's Contact Us page.
+*/
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-text {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    font-family: 'Lato', sans-serif;
+    color: #045D75;
+    font-size: 17px;
+}
+.nav a {
+    text-decoration: none;
+    color: #045D75;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 99999;
+  }
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 99999;
+  }
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+#dropdown:hover .dropdown-content {display: block;}
+
+/**
+* Section content
+*
+* Section content includes Indian cobra photo and paragraph description
+* about the genome browser.
+*/
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+}
+.sectionHead {
+    font-family: 'Merriweather', serif;
+    font-weight: 550;
+    font-size: 70px;
+    margin: 80px;
+    width: 800px;
+}
+p {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    width: 800px;
+    margin-top: 50px;
+}
+
+/**
+* Researchers
+*
+* Researchers includes paragraph description of the researchers and the section
+* of researcher photos slides over the content.
+*/
+
+/* Text introduction of researchers section */
+.people-intro {
+    margin-top: 75px;
+    font-family: 'Merriweather', serif;
+    font-weight: 550;
+    font-size: 50px;
+    background-color: #e4e3e3;
+    padding-top: 75px;
+    padding-left: 150px;
+    padding-bottom: 200px;
+    z-index: -1;
+    position: sticky;
+    top: 0;
+}
+
+/* Section with researcher images */
+.people {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: white;
+    height: 1000px;
+}
+
+/* Images are made circular and size adjusted */
+.people img {
+    border-radius: 300px;
+    width: auto;
+    height: 300px;
+    margin: 15px;
+    margin-top: 30px;
+}
+
+/**
+* Animations
+*
+* fadeIn and fadeDown animations applied to header/navbar and section content
+*/
+
+/*==== FADE IN ===*/
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0%, 0);
+      transform: translate3d(0, 0%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  /*==== FADE DOWN ===*/
+  @-webkit-keyframes fadeDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  .header {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .section {
+      -webkit-animation-name: fadeDown;
+      animation-name: fadeDown;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+  }
